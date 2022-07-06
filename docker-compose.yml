@@ -105,24 +105,6 @@ services:
     volumes:
       - ./jars_dir:/usr/src/app/target/scala-2.12/
 
-  nodejs-producer:
-    container_name: nodejs-producer
-    image: docker.io/mdiakhate12/nodejs-producer-kafka
-    networks:
-      kafka-spark:
-        ipv4_address: 172.18.0.14
-    depends_on:
-      - kafka
-    
-  nodejs-consumer:
-    container_name: nodejs-consumer
-    image: docker.io/mdiakhate12/nodejs-consumer-kafka
-    networks:
-      kafka-spark:
-        ipv4_address: 172.18.0.15
-    depends_on:
-      - kafka
-
   python-producer:
     container_name: python-producer
     image: python-producer
