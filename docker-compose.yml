@@ -125,7 +125,7 @@ services:
 
   python-producer:
     container_name: python-producer
-    image: docker.io/mdiakhate12/python-producer-kafka
+    image: python-producer
     networks:
       kafka-spark:
         ipv4_address: 172.18.0.16
